@@ -122,7 +122,7 @@ export default function ExternalReview({ formData, onPlatformVisited, onNext, on
                 whileTap={{ scale: 0.99 }}
                 onClick={() => {
                   setClickedTiles(prev => ({ ...prev, [platform.name]: true }));
-                  onPlatformVisited?.(platform.id ?? platform.name.toLowerCase());
+                  onPlatformVisited?.(platform.name.toLowerCase());
                 }}
                 className={`flex items-center justify-between p-5 rounded-2xl border-2 transition-all group ${
                   isClicked
