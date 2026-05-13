@@ -84,3 +84,5 @@ public/uploads/
 # -----------------------------
 .dockerignore
 docker-compose.yml
+
+yups_misc
