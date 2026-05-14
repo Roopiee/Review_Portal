@@ -918,9 +918,7 @@ body {
 /* responsive */
 @media (max-width: 720px) {
   .chrome { padding: 16px 18px; }
-  .progress { top: 18px; padding: 5px 12px; font-size: 11.5px; }
-  .progress .seg { width: 18px; }
-  .progress .label { display: none; }
+  .progress { display: none; }
   .brand-logo { height: 44px; }
   .stage { padding: 110px 22px 130px; }
   .compose { font-size: 20px; }
