@@ -1,25 +1,22 @@
-import type { Metadata } from "next";
-import { DM_Sans, Playfair_Display } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Inter_Tight } from 'next/font/google';
+import './globals.css';
 
-const dmSans = DM_Sans({ subsets: ["latin"], weight: ["300", "400", "500", "600"], variable: '--font-dm-sans' });
-const playfair = Playfair_Display({ subsets: ["latin"], weight: ["500", "700"], variable: '--font-playfair' });
+const interTight = Inter_Tight({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-inter-tight',
+});
 
 export const metadata: Metadata = {
-  title: "Employee Feedback Portal",
-  description: "Internal app for employees to submit company feedback.",
+  title: 'Pulse — Your Quarterly Review',
+  description: 'A short, immersive four-step employee feedback experience.',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${playfair.variable}`}>
-      <body className={`font-sans bg-bg text-slate min-h-screen`}>
-        {children}
-      </body>
+    <html lang="en" className={interTight.variable}>
+      <body data-theme="light">{children}</body>
     </html>
   );
 }

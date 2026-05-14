@@ -87,3 +87,5 @@ docker-compose.yml
 
 yups_misc
 yups_misc/
+.claude
+.claude/

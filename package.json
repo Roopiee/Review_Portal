@@ -6,11 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "db:migrate": "tsx src/scripts/run-migration.ts"
+    "db:migrate": "tsx src/scripts/run-migration.ts",
+    "db:migrate:002": "tsx src/scripts/migrations/002-pulse-schema.ts"
   },
   "dependencies": {
     "@types/pg": "^8.20.0",
-    "canvas-confetti": "^1.9.4",
     "framer-motion": "^12.38.0",
     "lucide-react": "^0.460.0",
     "next": "14.1.1",
@@ -19,7 +19,6 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@types/canvas-confetti": "^1.9.0",
     "@types/node": "20.11.30",
     "@types/react": "18.2.71",
     "@types/react-dom": "18.2.17",

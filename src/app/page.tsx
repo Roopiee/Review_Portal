@@ -1,9 +1,5 @@
-import FeedbackPortal from '@/components/FeedbackPortal';
+import PulseImmersivePortal from '@/components/pulse/PulseImmersivePortal';
 
 export default function Page() {
-  return (
-    <main className="min-h-screen">
-      <FeedbackPortal />
-    </main>
-  );
+  return <PulseImmersivePortal />;
 }
