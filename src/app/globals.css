@@ -128,9 +128,15 @@ body {
   z-index: 10;
   display: flex; align-items: center;
   padding: 22px 32px;
-  pointer-events: none;
+  background: rgba(251, 250, 247, 0.92);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border-bottom: 1px solid var(--hairline);
 }
-.chrome > * { pointer-events: auto; }
+[data-theme="dark"] .chrome {
+  background: rgba(6, 8, 26, 0.92);
+  border-bottom-color: var(--hairline);
+}
 .brand {
   display: inline-flex; align-items: center; gap: 10px;
   color: var(--ink);
@@ -207,7 +213,7 @@ body {
   min-height: 100vh;
   display: flex; flex-direction: column;
   align-items: center; justify-content: flex-start;
-  padding: 200px 64px 40px;
+  padding: 140px 64px 40px;
 }
 .scene {
   width: 100%; max-width: 1400px;

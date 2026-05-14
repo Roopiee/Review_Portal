@@ -17,7 +17,7 @@ const TOTAL_STEPS = 4;
 export default function PulseImmersivePortal() {
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState<PulseFormData>(INITIAL_FORM_DATA);
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [draftSavedAt, setDraftSavedAt] = useState<number | null>(null);

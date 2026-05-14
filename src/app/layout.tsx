@@ -9,14 +9,14 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  title: 'Pulse — Your Quarterly Review',
+  title: 'Net Connect Global - Employee Feedback Portal',
   description: 'A short, immersive four-step employee feedback experience.',
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={interTight.variable}>
-      <body data-theme="light">{children}</body>
+      <body data-theme="dark">{children}</body>
     </html>
   );
 }
