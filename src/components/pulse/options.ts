@@ -2,11 +2,13 @@
 // Pulse flow. Values match the Postgres enums defined in run-migration.ts.
 
 export const DEPARTMENTS = [
-  { value: "product_engineering", label: "Product Engineering" },
-  { value: "design", label: "Design" },
-  { value: "growth_marketing", label: "Growth & Marketing" },
-  { value: "client_delivery", label: "Client Delivery" },
-  { value: "hr", label: "HR" },
+  { value: "finance", label: "Finance" },
+  { value: "compliance_legal", label: "Compliance & Legal" },
+  { value: "hr_admin", label: "HR & Admin" },
+  { value: "admin", label: "Admin" },
+  { value: "welocity_pre_sales", label: "Welocity-Pre Sales" },
+  { value: "welocity_sales", label: "Welocity-Sales" },
+  { value: "welocity_engineering", label: "Welocity Engineering" },
 ] as const;
 
 export const TENURES = [

@@ -49,12 +49,14 @@ async function main() {
       "y3_5",
       "y5_plus",
     ]);
-    await ensureEnum("pulse_department", [
-      "product_engineering",
-      "design",
-      "growth_marketing",
-      "client_delivery",
-      "hr",
+    await ensureEnum("department", [
+      "finance",
+      "compliance_legal",
+      "hr_admin",
+      "admin",
+      "welocity_pre_sales",
+      "welocity_sales",
+      "welocity_engineering",
     ]);
 
     /* Add new columns. For an existing table with rows we can't make these NOT NULL
@@ -63,7 +65,7 @@ async function main() {
        backfill historical rows and tighten the constraint if desired. */
     await client.query(`
       ALTER TABLE review_portal
-        ADD COLUMN IF NOT EXISTS department  pulse_department,
+        ADD COLUMN IF NOT EXISTS department  department,
         ADD COLUMN IF NOT EXISTS tenure      pulse_tenure,
         ADD COLUMN IF NOT EXISTS emotion     pulse_emotion,
         ADD COLUMN IF NOT EXISTS energizers  TEXT[] NOT NULL DEFAULT '{}',

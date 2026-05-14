@@ -4,11 +4,13 @@ import { query } from '@/lib/db';
 const EMOTIONS = ['drained', 'neutral', 'okay', 'good', 'great'] as const;
 const TENURES = ['lt_6m', 'm6_12', 'y1_3', 'y3_5', 'y5_plus'] as const;
 const DEPARTMENTS = [
-  'product_engineering',
-  'design',
-  'growth_marketing',
-  'client_delivery',
-  'hr',
+  'finance',
+  'compliance_legal',
+  'hr_admin',
+  'admin',
+  'welocity_pre_sales',
+  'welocity_sales',
+  'welocity_engineering',
 ] as const;
 const PLATFORMS = ['ambitionbox', 'google', 'glassdoor'] as const;
 
@@ -92,7 +94,7 @@ export async function POST(req: NextRequest) {
           user_agent
        ) VALUES (
           $1, $2,
-          $3::pulse_department,
+          $3::department,
           $4::pulse_tenure,
           $5::pulse_emotion,
           $6::text[],

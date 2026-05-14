@@ -52,12 +52,14 @@ async function main() {
       "y3_5",
       "y5_plus",
     ]);
-    await ensureEnum("pulse_department", [
-      "product_engineering",
-      "design",
-      "growth_marketing",
-      "client_delivery",
-      "hr",
+    await ensureEnum("department", [
+      "finance",
+      "compliance_legal",
+      "hr_admin",
+      "admin",
+      "welocity_pre_sales",
+      "welocity_sales",
+      "welocity_engineering",
     ]);
 
     /* ──────────────────────────────────────────────
@@ -77,7 +79,7 @@ async function main() {
         -- Step 1: Profile
         employee_name   TEXT             NOT NULL,
         role            TEXT             NOT NULL,
-        department      pulse_department NOT NULL,
+        department      department NOT NULL,
         tenure          pulse_tenure     NOT NULL,
 
         -- Step 2: Feedback
