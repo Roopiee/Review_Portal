@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter_Tight } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 
 const interTight = Inter_Tight({
@@ -16,7 +17,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={interTight.variable}>
-      <body data-theme="dark">{children}</body>
+      <body data-theme="dark">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
